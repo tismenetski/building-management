@@ -5,9 +5,10 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Payment extends Model
+class Expense extends Model
 {
     use HasFactory;
+
 
     /**
      * The attributes that are mass assignable.
@@ -15,12 +16,13 @@ class Payment extends Model
      * @var array
      */
     protected $fillable = [
-        'payer_name',
+        'expense_name',
+        'expense_for',
         'paid_at',
-        'payment_method',
         'amount',
-        'payment_notes',
-        'paid_for'
+        'payment_method',
+        'expense_notes',
+        'paid_for',
     ];
 
 }
