@@ -32,6 +32,9 @@ export default {
         return {
             message:'Hello World'
         }
+    },
+    created() {
+        this.$store.dispatch('tryLogin');
     }
 };
 </script>

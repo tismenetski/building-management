@@ -8,7 +8,7 @@
         </base-dialog>
         <base-card>
             <form @submit.prevent="submitForm">
-                <div class="form-control">
+                <div class="form-control" v-if="mode==='signup'">
                     <label for="name">Name</label>
                     <input type="text" name="" id="name" v-model.trim="name" />
                 </div>
@@ -68,7 +68,6 @@ export default {
             try {
                 if (this.mode === 'login') {
                     await this.$store.dispatch('login', {
-                        name : this.name,
                         email: this.email,
                         password: this.password,
                     });
@@ -81,7 +80,7 @@ export default {
                 }
                 // if we add to router-link a query param using /auth?redirect=register then we can extract it like this and use it to redirect the user after
                 // an action
-                const redirectUrl = '/' + (this.$route.query.redirect || 'coaches');
+                const redirectUrl = '/' + (this.$route.query.redirect || 'home');
                 this.$router.replace(redirectUrl);
             } catch (error) {
                 this.error = error.message || 'Failed To Authenticate';

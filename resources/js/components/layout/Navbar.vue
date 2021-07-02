@@ -3,12 +3,18 @@
     <nav class="navbar">
         <router-link to="/"><h1><i class="fas fa-building"></i> Building Management</h1></router-link>
         <div class="navbar-brand">
-            <ul>
+            <ul v-if="!isLoggedIn">
                 <li>
                     <router-link to="/auth">Login</router-link>
                 </li>
+
+            </ul>
+            <ul v-else>
                 <li>
-                    <router-link to="/messages">Messages</router-link>
+                    <router-link to="/auth" @click="logout">Logout</router-link>
+                </li>
+                <li>
+                    <router-link  to="/messages">Messages</router-link>
                 </li>
             </ul>
         </div>
@@ -18,7 +24,18 @@
 
 <script>
 export default {
-    name: "Navbar"
+    name: "Navbar",
+    computed: {
+        isLoggedIn() {
+            return this.$store.getters.isAuthenticated;
+        }
+    },
+    methods: {
+        logout() {
+            this.$store.dispatch('logout');
+            this.$router.replace('/auth');
+        }
+    }
 }
 </script>
 

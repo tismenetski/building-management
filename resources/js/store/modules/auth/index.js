@@ -5,7 +5,7 @@ import actions from './actions';
 export default {
     state() {
         return {
-            userId: null,
+            // userId: null,
             token: null,
             didAutoLogout: false
         };

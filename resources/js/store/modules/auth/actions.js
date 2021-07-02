@@ -8,10 +8,37 @@ export default {
      * @returns
      */
     async signup(context, payload) {
-        return context.dispatch('auth', {
-            ...payload,
-            mode: 'signup'
+        let url ='api/register';
+
+        const response = await fetch(url, {
+            method: 'POST',
+            body: JSON.stringify( {
+                name : payload.name,
+                email: payload.email,
+                password: payload.password,
+            }),
+            headers: {
+                'Content-Type': 'application/json'
+            },
         });
+        const responseData = await response.json();
+        console.log(responseData);
+        console.log('Printed Response Data');
+
+        // response object have ok field, we check for this field, if not existing we know we have an error;
+        // this error handling is made so that will throw our error to to top component and from there we try catch the error
+        if (!response.ok) {
+            //console.log('RESPONSE NOT OK' + responseData);
+            const error = new Error(responseData.message || 'Cannot Signup');
+            throw error;
+        }
+
+        localStorage.setItem('token', responseData.token);
+
+        context.commit('setUser', {
+            token: responseData.token,
+        });
+
     },
     /**
      * Function to start the login process.this is called from the auth registration process
@@ -20,9 +47,36 @@ export default {
      * @returns
      */
     async login(context, payload) {
-        return context.dispatch('auth', {
-            ...payload,
-            mode: 'login'
+
+        let url ='/api/login';
+
+        const response = await fetch(url, {
+            method: 'POST',
+            body: JSON.stringify( {
+                email: payload.email,
+                password: payload.password,
+            }),
+            headers: {
+                'Content-Type': 'application/json'
+            },
+        });
+
+        const responseData = await response.json();
+        console.log(responseData);
+        console.log('Printed Response Data');
+
+
+        // response object have ok field, we check for this field, if not existing we know we have an error;
+        // this error handling is made so that will throw our error to to top component and from there we try catch the error
+        if (!response.ok) {
+            //console.log('RESPONSE NOT OK' + responseData);
+            const error = new Error(responseData.message || 'Cannot Signup');
+            throw error;
+        }
+        localStorage.setItem('token', responseData.token);
+
+        context.commit('setUser', {
+            token: responseData.token,
         });
     },
 
@@ -33,8 +87,6 @@ export default {
      */
     logout(context) {
         localStorage.removeItem('token');
-        localStorage.removeItem('userId');
-        localStorage.removeItem('tokenExpiration');
 
         clearTimeout(timer); // clears the timer, the time of token expiration remaining
 
@@ -49,57 +101,57 @@ export default {
      * @param {*} context
      * @param {*} payload
      */
-    async auth(context, payload) {
-        const mode = payload.mode;
-        let url =
-            '/api/login';
-        if (mode === 'signup') {
-            url =
-                'api/register';
-        }
-        const response = await fetch(url, {
-            method: 'POST',
-            body: JSON.stringify( {
-                name : payload.name,
-                email: payload.email,
-                password: payload.password,
-            }),
-            headers: {
-                'Content-Type': 'application/json'
-            },
-        });
-        //console.log(response.data);
-        const responseData = await response.json();
-        console.log(responseData);
-        console.log('Printed Response Data');
-        //console.log(response.data);
-        //console.log(response);
-
-        // response object have ok field, we check for this field, if not existing we know we have an error;
-        // this error handling is made so that will throw our error to to top component and from there we try catch the error
-        if (!response.ok) {
-            //console.log('RESPONSE NOT OK' + responseData);
-            const error = new Error(responseData.message || 'Cannot Signup');
-            throw error;
-        }
-
-        const expiresIn = +responseData.expiresIn * 1000;
-        const expirationDate = new Date().getTime() + expiresIn;
-
-        localStorage.setItem('token', responseData.token);
-        localStorage.setItem('userId', responseData.localId);
-        // localStorage.setItem('tokenExpiration', expirationDate);
-
-        // auto logout the user after the timer of the token expires
-        // timer = setTimeout(function() {
-        //     context.dispatch('autoLogout');
-        // }, expiresIn);
-
-        context.commit('setUser', {
-            token: responseData.token,
-            userId: responseData.localId
-        });
-    },
+    // async auth(context, payload) {
+    //     const mode = payload.mode;
+    //     let url =
+    //         '/api/login';
+    //     if (mode === 'signup') {
+    //         url =
+    //             'api/register';
+    //     }
+    //     const response = await fetch(url, {
+    //         method: 'POST',
+    //         body: JSON.stringify( {
+    //             name : payload.name,
+    //             email: payload.email,
+    //             password: payload.password,
+    //         }),
+    //         headers: {
+    //             'Content-Type': 'application/json'
+    //         },
+    //     });
+    //     //console.log(response.data);
+    //     const responseData = await response.json();
+    //     console.log(responseData);
+    //     console.log('Printed Response Data');
+    //     //console.log(response.data);
+    //     //console.log(response);
+    //
+    //     // response object have ok field, we check for this field, if not existing we know we have an error;
+    //     // this error handling is made so that will throw our error to to top component and from there we try catch the error
+    //     if (!response.ok) {
+    //         //console.log('RESPONSE NOT OK' + responseData);
+    //         const error = new Error(responseData.message || 'Cannot Signup');
+    //         throw error;
+    //     }
+    //
+    //     // const expiresIn = +responseData.expiresIn * 1000;
+    //     // const expirationDate = new Date().getTime() + expiresIn;
+    //
+    //     localStorage.setItem('token', responseData.token);
+    //     // localStorage.setItem('userId', responseData.localId);
+    //     // localStorage.setItem('tokenExpiration', expirationDate);
+    //
+    //     // auto logout the user after the timer of the token expires
+    //     // timer = setTimeout(function() {
+    //     //     context.dispatch('autoLogout');
+    //     // }, expiresIn);
+    //
+    //     context.commit('setUser', {
+    //         token: responseData.token,
+    //         // userId: responseData.localId
+    //     });
+    // },
 
     /**
      * This function is called when the application is being loaded, checks if local Storage have token and userId and sets them in the
@@ -109,7 +161,7 @@ export default {
      */
     tryLogin(context) {
         const token = localStorage.getItem('token');
-        const userId = localStorage.getItem('userId');
+        // const userId = localStorage.getItem('userId');
         // const tokenExpiration = localStorage.getItem('tokenExpiration');
         //
         // const expiresIn = +tokenExpiration - new Date().getTime();
@@ -122,10 +174,9 @@ export default {
         //     context.dispatch('autoLogout');
         // }, expiresIn);
 
-        if (token && userId) {
+        if (token) {
             context.commit('setUser', {
                 token,
-                userId
             });
         }
     },
