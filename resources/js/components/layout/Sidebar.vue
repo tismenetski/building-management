@@ -2,22 +2,22 @@
         <div class="sidebar">
         <ul class="list-group">
             <li class="list-group-item">
-                <a href="/finances">Finances</a>
+                <a href="/finances"><i class="fas fa-hand-holding-usd"></i> Finances</a>
             </li>
             <li class="list-group-item">
-                <a href="/news">News</a>
+                <a href="/news"><i class="fas fa-rss-square"></i> News</a>
             </li>
             <li class="list-group-item">
-                <a href="/requests">Requests</a>
+                <a href="/requests"><i class="fas fa-hands-helping"></i> Requests</a>
             </li>
             <li class="list-group-item">
-                <a href="/events">Events</a>
+                <a href="/events"><i class="fas fa-calendar-alt"></i> Events</a>
             </li>
             <li class="list-group-item">
-                <a href="/pictures">Pictures</a>
+                <a href="/pictures"><i class="fas fa-camera-retro"></i> Pictures</a>
             </li>
             <li class="list-group-item">
-                <a href="/cameras">Cameras</a>
+                <a href="/cameras"><i class="fas fa-video"></i> Cameras</a>
             </li>
         </ul>
         </div>

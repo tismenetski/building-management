@@ -1,7 +1,7 @@
 <template>
 <header>
     <nav class="navbar">
-        <router-link to="/"><h1>Find A Coach</h1></router-link>
+        <router-link to="/"><h1><i class="fas fa-building"></i> Building Management</h1></router-link>
         <div class="navbar-brand">
             <ul>
                 <li>
@@ -36,9 +36,29 @@ export default {
      align-items: center;
 
  }
+ a,a:focus,a:active {
+     color: #fff;
+ }
+
+ .navbar a {
+    text-decoration: none;
+     margin-left: 20px;
+ }
+
+ .navbar ul {
+     list-style: none;
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+ }
 
  li a {
      color: white;
+     text-decoration: none;
+     padding: 20px;
+     margin-left: 20px;
+     font-size: 20px;
+
  }
 
 

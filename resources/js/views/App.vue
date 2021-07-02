@@ -45,7 +45,7 @@ export default {
 }
 
 .main {
-    width: 80%;
+    width: 75%;
 }
 
 .wrapper {

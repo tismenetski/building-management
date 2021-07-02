@@ -16606,7 +16606,9 @@ var _hoisted_1 = {
   "class": "navbar"
 };
 
-var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("h1", null, "Find A Coach", -1
+var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("h1", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("i", {
+  "class": "fas fa-building"
+}), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Building Management")], -1
 /* HOISTED */
 );
 
@@ -16677,7 +16679,7 @@ var _hoisted_1 = {
   "class": "sidebar"
 };
 
-var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<ul class=\"list-group\" data-v-65bb863c><li class=\"list-group-item\" data-v-65bb863c><a href=\"/finances\" data-v-65bb863c>Finances</a></li><li class=\"list-group-item\" data-v-65bb863c><a href=\"/news\" data-v-65bb863c>News</a></li><li class=\"list-group-item\" data-v-65bb863c><a href=\"/requests\" data-v-65bb863c>Requests</a></li><li class=\"list-group-item\" data-v-65bb863c><a href=\"/events\" data-v-65bb863c>Events</a></li><li class=\"list-group-item\" data-v-65bb863c><a href=\"/pictures\" data-v-65bb863c>Pictures</a></li><li class=\"list-group-item\" data-v-65bb863c><a href=\"/cameras\" data-v-65bb863c>Cameras</a></li></ul>", 1);
+var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<ul class=\"list-group\" data-v-65bb863c><li class=\"list-group-item\" data-v-65bb863c><a href=\"/finances\" data-v-65bb863c><i class=\"fas fa-hand-holding-usd\" data-v-65bb863c></i> Finances</a></li><li class=\"list-group-item\" data-v-65bb863c><a href=\"/news\" data-v-65bb863c><i class=\"fas fa-rss-square\" data-v-65bb863c></i> News</a></li><li class=\"list-group-item\" data-v-65bb863c><a href=\"/requests\" data-v-65bb863c><i class=\"fas fa-hands-helping\" data-v-65bb863c></i> Requests</a></li><li class=\"list-group-item\" data-v-65bb863c><a href=\"/events\" data-v-65bb863c><i class=\"fas fa-calendar-alt\" data-v-65bb863c></i> Events</a></li><li class=\"list-group-item\" data-v-65bb863c><a href=\"/pictures\" data-v-65bb863c><i class=\"fas fa-camera-retro\" data-v-65bb863c></i> Pictures</a></li><li class=\"list-group-item\" data-v-65bb863c><a href=\"/cameras\" data-v-65bb863c><i class=\"fas fa-video\" data-v-65bb863c></i> Cameras</a></li></ul>", 1);
 
 (0,vue__WEBPACK_IMPORTED_MODULE_0__.popScopeId)();
 
@@ -17588,7 +17590,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.navbar[data-v-2c4263fa] {\n     width: 100%;\n     height: 50px;\n     background-color: #687864;\n     display: flex;\n     flex-direction: row;\n     justify-content: space-between;\n     align-items: center;\n}\nli a[data-v-2c4263fa] {\n     color: white;\n}\n\n\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.navbar[data-v-2c4263fa] {\n     width: 100%;\n     height: 50px;\n     background-color: #687864;\n     display: flex;\n     flex-direction: row;\n     justify-content: space-between;\n     align-items: center;\n}\na[data-v-2c4263fa],a[data-v-2c4263fa]:focus,a[data-v-2c4263fa]:active {\n     color: #fff;\n}\n.navbar a[data-v-2c4263fa] {\n    text-decoration: none;\n     margin-left: 20px;\n}\n.navbar ul[data-v-2c4263fa] {\n     list-style: none;\n     display: flex;\n     flex-direction: row;\n     justify-content: space-between;\n}\nli a[data-v-2c4263fa] {\n     color: white;\n     text-decoration: none;\n     padding: 20px;\n     margin-left: 20px;\n     font-size: 20px;\n}\n\n\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -17804,7 +17806,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n* {\n    margin: 0;\n    padding: 0;\n    box-sizing: border-box;\n}\n.main {\n    width: 80%;\n}\n.wrapper {\n    display: flex;\n    /*justify-content: flex-start;*/\n}\n\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n* {\n    margin: 0;\n    padding: 0;\n    box-sizing: border-box;\n}\n.main {\n    width: 75%;\n}\n.wrapper {\n    display: flex;\n    /*justify-content: flex-start;*/\n}\n\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
