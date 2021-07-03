@@ -33,11 +33,12 @@ class ExpenseController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param Request $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
     {
+        //dd($request);
         $validator = Validator::make($request->all(), [
             'expense_name' => 'required|string|max:255',
             'expense_for' => 'required|string|max:255',
@@ -82,7 +83,7 @@ class ExpenseController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param Request $request
      * @param  int  $id
      * @return \Illuminate\Http\JsonResponse
      */

@@ -22,7 +22,7 @@ class Expense extends Model
         'amount',
         'payment_method',
         'expense_notes',
-        'paid_for',
+
     ];
 
 }
