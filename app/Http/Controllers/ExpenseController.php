@@ -12,7 +12,7 @@ class ExpenseController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return array
+     * @return array|\Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\Routing\ResponseFactory|\Illuminate\Http\Response
      */
     public function index()
     {
@@ -20,6 +20,7 @@ class ExpenseController extends Controller
         Log::info('Request to get all Expenses');
 
         $response = ['data' => $expenses,'message' => 'Successfully Got Expenses!'];
+        Log::info('Returning Expenses:', [$response['data']]);
         return response($response, 200);
     }
 
@@ -59,6 +60,7 @@ class ExpenseController extends Controller
 
         $expense = Expense::create($request->toArray());
         $response = ['data' => $expense,'message' => 'Successfully Saved Expense!'];
+        Log::info('Saved new instance of Expense:', [$response['data']]);
         return response($response, 200);
     }
 
