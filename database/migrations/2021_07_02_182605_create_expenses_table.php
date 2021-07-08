@@ -21,7 +21,7 @@ class CreateExpensesTable extends Migration
             $table->date('paid_at');
             $table->decimal('amount');
             $table->string('payment_method');
-            $table->text('expense_notes');
+            $table->text('expense_notes')->nullable();
         });
     }
 

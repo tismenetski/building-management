@@ -4,6 +4,8 @@ import UserAuth from './pages/auth/UserAuth.vue';
 import NotFound from './pages/NotFound.vue';
 import Home from './pages/Home';
 import store from './store/index';
+import Expenses from "./pages/finances/Expenses/Expenses";
+import AddExpense from "./pages/finances/Expenses/AddExpense";
 
 const router = createRouter({
     history : createWebHistory(),
@@ -11,7 +13,10 @@ const router = createRouter({
         {path : '/',redirect: '/home' },
         {path: '/home', component : Home,meta: { requiresAuth: true }},
         { path: '/auth', component: UserAuth,meta: { requiresUnauth: true } },
-        { path: '/:notFound(.*)', component: NotFound }
+        {path : '/expenses', component : Expenses, meta : {requiresAuth: true}},
+        {path : '/expenses/addExpense',component : AddExpense, meta : {requiresAuth: true}},
+        { path: '/:notFound(.*)', component: NotFound },
+
     ]
 });
 

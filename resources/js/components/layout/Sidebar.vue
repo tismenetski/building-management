@@ -31,7 +31,7 @@ export default {
 
 <style scoped>
     .sidebar {
-        display: inline-block;
+        /*display: inline-block;*/
         position: -webkit-sticky;
         position: sticky;
         top: 0;
@@ -48,13 +48,21 @@ export default {
     }
 
     .list-group-item {
+        width : 12vw;
         padding: 20px;
         list-style: none;
     }
     .list-group-item > a {
+        display: flex;
         text-decoration: none;
         font-size: 30px;
         color: #fff;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    .list-group-item > a > i {
+        margin-right: 20px;
     }
 
 </style>

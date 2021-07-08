@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Expense;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Validator;
 
 class ExpenseController extends Controller
@@ -16,8 +17,10 @@ class ExpenseController extends Controller
     public function index()
     {
         $expenses = Expense::all()->toArray();
+        Log::info('Request to get all Expenses');
 
-        return array_reverse($expenses);
+        $response = ['data' => $expenses,'message' => 'Successfully Got Expenses!'];
+        return response($response, 200);
     }
 
     /**
@@ -39,6 +42,7 @@ class ExpenseController extends Controller
     public function store(Request $request)
     {
         //dd($request);
+        Log::info('Request to add expense');
         $validator = Validator::make($request->all(), [
             'expense_name' => 'required|string|max:255',
             'expense_for' => 'required|string|max:255',
@@ -49,6 +53,7 @@ class ExpenseController extends Controller
         ]);
         if ($validator->fails())
         {
+            Log::error('Validation failed',[$validator->errors()->all()]);
             return response(['errors'=>$validator->errors()->all()], 422);
         }
 
