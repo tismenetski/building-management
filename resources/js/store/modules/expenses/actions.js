@@ -54,7 +54,8 @@ export default {
             expense_for : data.paidFor,
             amount : data.amount,
             paid_at : data.paidAt,
-            payment_method : data.paymentMethod
+            payment_method : data.paymentMethod,
+            expense_notes : data.expenseNotes
 
         }
 

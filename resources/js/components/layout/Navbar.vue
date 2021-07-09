@@ -44,22 +44,27 @@ export default {
 
 
  .navbar {
+     position: fixed;
+     top : 0;
      width: 100%;
-     height: 50px;
-     background-color: #687864;
+     height: 60px;
+     background-color: #dfdfdf;
      display: flex;
      flex-direction: row;
      justify-content: space-between;
      align-items: center;
+     overflow: hidden;
+     z-index: 1;
 
  }
  a,a:focus,a:active {
-     color: #fff;
+     color: #3e0748;
  }
 
  .navbar a {
     text-decoration: none;
      margin-left: 20px;
+     /*margin-right: 40px;*/
  }
 
  .navbar ul {
@@ -70,10 +75,11 @@ export default {
  }
 
  li a {
-     color: white;
+     color: #3e0748;
      text-decoration: none;
      padding: 20px;
-     margin-left: 20px;
+     margin-left: 40px;
+     margin-right: 60px;
      font-size: 20px;
 
  }

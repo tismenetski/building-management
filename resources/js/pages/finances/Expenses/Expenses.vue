@@ -1,4 +1,5 @@
 <template>
+    <h1 class="title">Building Expenses</h1>
 <table class="center">
     <thead>
         <td>
@@ -23,8 +24,9 @@
             Expense Notes
         </td>
     </thead>
-    <tbody v-for="expense in expenses">
-    <tr>
+    <tbody>
+
+    <tr v-for="expense in expenses">
         <td>{{expense.created_at}}</td>
         <td>{{expense.expense_name}}</td>
         <td>{{expense.expense_for}}</td>
@@ -86,27 +88,35 @@ export default {
 
 <style scoped>
 
-:root{
-    --primary-color : #31708E;
+.title {
+    margin: 10vh auto;
+    text-align: center;
+    color : #3e0748;
 }
-
 
 .center {
-
-    margin: 0 auto;
+    margin: 10vh auto;
 }
 
- td {
-    border: 1px solid black;
+.center td {
      text-align: center;
+     font-size: 12px;
 }
 
- thead > td {
-     font-size: 20px;
-     color: var( --primary-color);
+tr {
+    border-bottom: 1pt solid black;
+ }
+
+.center  td {
+     font-size: 14px;
+    border-bottom: 1pt solid black;
  }
 
 table {
-    width: 100%;
+    border: 1px solid black;
+    border-collapse: collapse;
+    overflow: hidden;
+    table-layout: auto;
+    width: 1200px;
 }
 </style>
