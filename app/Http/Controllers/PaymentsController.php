@@ -7,7 +7,7 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
-class PaymentController extends Controller
+class PaymentsController extends Controller
 {
     /**
      * Display a listing of the resource.

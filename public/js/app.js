@@ -17794,22 +17794,30 @@ var _hoisted_1 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("
 /* HOISTED */
 );
 
-var _hoisted_2 = {
+var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
+  "class": "expense-totals"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("table", {
   "class": "center"
-};
-
-var _hoisted_3 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("thead", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("td", null, " Date Created "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("td", null, " Expense Name "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("td", null, " Paid For "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("td", null, " Amount "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("td", null, " Paid At "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("td", null, " Payment Method "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("td", null, " Expense Notes ")], -1
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("thead", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("td")])])], -1
 /* HOISTED */
 );
 
-var _hoisted_4 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Add Expense");
+var _hoisted_3 = {
+  "class": "center"
+};
+
+var _hoisted_4 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("thead", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("td", null, " Date Created "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("td", null, " Expense Name "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("td", null, " Paid For "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("td", null, " Amount "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("td", null, " Paid At "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("td", null, " Payment Method "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("td", null, " Expense Notes ")], -1
+/* HOISTED */
+);
+
+var _hoisted_5 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Add Expense");
 
 (0,vue__WEBPACK_IMPORTED_MODULE_0__.popScopeId)();
 
 var render = /*#__PURE__*/_withId(function (_ctx, _cache, $props, $setup, $data, $options) {
   var _component_base_button = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("base-button");
 
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, [_hoisted_1, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("table", _hoisted_2, [_hoisted_3, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("tbody", null, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($options.expenses, function (expense) {
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, [_hoisted_1, _hoisted_2, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("table", _hoisted_3, [_hoisted_4, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("tbody", null, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($options.expenses, function (expense) {
     return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)("tr", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("td", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(expense.created_at), 1
     /* TEXT */
     ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("td", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(expense.expense_name), 1
@@ -17832,7 +17840,7 @@ var render = /*#__PURE__*/_withId(function (_ctx, _cache, $props, $setup, $data,
     to: $options.addExpense
   }, {
     "default": _withId(function () {
-      return [_hoisted_4];
+      return [_hoisted_5];
     }),
     _: 1
     /* STABLE */
@@ -18790,7 +18798,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.add-expense[data-v-dbc873c4] {\n    /*margin : 0 auto;*/\n    margin: 2rem auto;\n    max-width: 40rem;\n}\n.form-control[data-v-dbc873c4] {\n    margin : 8px auto;\n}\nlabel[data-v-dbc873c4] {\n    font-weight: bold;\n    display: block;\n    margin-bottom: 0.5rem;\n}\ninput[data-v-dbc873c4],\ntextarea[data-v-dbc873c4] {\n    display: block;\n    width: 100%;\n    border: 1px solid #ccc;\n    font: inherit;\n    border-radius: 5px;\n}\ninput[data-v-dbc873c4]:focus,\ntextarea[data-v-dbc873c4]:focus {\n    background-color: #f0e6fd;\n    outline: none;\n    border-color: #3d008d;\n}\ninput[type='checkbox'][data-v-dbc873c4] {\n    display: inline;\n    width: auto;\n    border: none;\n}\ninput[type='checkbox'][data-v-dbc873c4]:focus {\n    outline: #3d008d solid 1px;\n}\nh3[data-v-dbc873c4] {\n    margin: 0.5rem 0;\n    font-size: 1rem;\n}\n.invalid label[data-v-dbc873c4] {\n    color: red;\n}\n.invalid input[data-v-dbc873c4],\n.invalid textarea[data-v-dbc873c4] {\n    border: 1px solid red;\n}\n\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.add-expense[data-v-dbc873c4] {\n    /*margin : 0 auto;*/\n    margin: 10rem auto;\n    max-width: 40rem;\n}\n.form-control[data-v-dbc873c4] {\n    margin : 8px auto;\n}\nlabel[data-v-dbc873c4] {\n    font-weight: bold;\n    display: block;\n    margin-bottom: 0.5rem;\n}\ninput[data-v-dbc873c4],\ntextarea[data-v-dbc873c4] {\n    display: block;\n    width: 100%;\n    border: 1px solid #ccc;\n    font: inherit;\n    border-radius: 5px;\n}\ninput[data-v-dbc873c4]:focus,\ntextarea[data-v-dbc873c4]:focus {\n    background-color: #f0e6fd;\n    outline: none;\n    border-color: #3d008d;\n}\ninput[type='checkbox'][data-v-dbc873c4] {\n    display: inline;\n    width: auto;\n    border: none;\n}\ninput[type='checkbox'][data-v-dbc873c4]:focus {\n    outline: #3d008d solid 1px;\n}\nh3[data-v-dbc873c4] {\n    margin: 0.5rem 0;\n    font-size: 1rem;\n}\n.invalid label[data-v-dbc873c4] {\n    color: red;\n}\n.invalid input[data-v-dbc873c4],\n.invalid textarea[data-v-dbc873c4] {\n    border: 1px solid red;\n}\n\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -18814,7 +18822,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.title[data-v-b45b62fc] {\n    margin: 10vh auto;\n    text-align: center;\n    color : #3e0748;\n}\n.center[data-v-b45b62fc] {\n    margin: 10vh auto;\n}\n.center td[data-v-b45b62fc] {\n     text-align: center;\n     font-size: 12px;\n}\ntr[data-v-b45b62fc] {\n    border-bottom: 1pt solid black;\n}\n.center  td[data-v-b45b62fc] {\n     font-size: 14px;\n    border-bottom: 1pt solid black;\n}\ntable[data-v-b45b62fc] {\n    border: 1px solid black;\n    border-collapse: collapse;\n    overflow: hidden;\n    table-layout: auto;\n    width: 1200px;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.title[data-v-b45b62fc] {\n    margin: 15vh auto 0 auto;\n    text-align: center;\n    color : #3e0748;\n}\n.center[data-v-b45b62fc] {\n    margin: 10vh auto;\n    border-spacing: 0px;\n}\n.center  td[data-v-b45b62fc] {\n    border-bottom: 1pt solid black;\n     text-align: center;\n     font-size: 12px;\n    padding: 0;\n}\n.center thead  td[data-v-b45b62fc] {\n    border-bottom: 1pt solid black;\n    text-align: center;\n    font-size: 16px;\n}\ntable[data-v-b45b62fc] {\n\n    border: 1px solid black;\n    /*border-collapse: collapse;*/\n    overflow: hidden;\n    /*table-layout: auto;*/\n    width: 1200px;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -18839,7 +18847,7 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 ___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap);"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n/*:root {*/\n/*    --primary-color: #15063A;*/\n/*    --secondary-color : #8A7BAF*/\n/*}*/\n/** {*/\n/*    margin: 0;*/\n/*    padding: 0;*/\n/*    box-sizing: border-box;*/\n/*}*/\n\n\n\n/*.wrapper {*/\n/*    display: flex;*/\n/*    !*justify-content: flex-start;*!*/\n/*}*/\n::-webkit-scrollbar {\n    display: none;\n}\n* {\n    margin : 0;\n    padding : 0;\n    box-sizing: border-box;\n    font-family : 'Poppins',sans-serif;\n}\nbody {\n    min-height: 100vh;\n    background: #fff;\n    /*background: #150019;*/\n    /*overflow: hidden; !* Hide scrollbars *!*/\n}\n.main {\n    width: 80vw;\n    margin: 0 auto;\n    overflow-y: scroll;\n    -ms-overflow-style: none;  /* IE and Edge */\n    scrollbar-width: none;  /* Firefox */\n}\n\n/*.main::-webkit-scrollbar {*/\n/*    display: none;*/\n/*}*/\n.navigation {\n    margin-top: 60px;\n    position : fixed;\n    width : 60px;\n    height : 100%;\n    background: #3e0748;\n    transition: 0.5s;\n    /*//overflow: hidden;*/\n}\n.navigation:hover,\n.navigation.active{\n    width : 300px;\n}\n.navigation ul {\n    position: absolute;\n    top : 0;\n    left :0;\n    width : 100%;\n    color : #fff;\n}\n.navigation ul li {\n    position: relative;\n    width : 100%;\n    list-style: none;\n}\n.navigation ul li:hover {\n    background: #ea1d63;\n}\n.navigation ul li a {\n    position: relative;\n    /*display: block;*/\n    width: 100%;\n    display: flex;\n    text-decoration: none;\n    color : #fff;\n}\n.navigation ul li a .icon {\n\n    position: relative;\n    display: block;\n    min-width: 60px;\n    height: 60px;\n    line-height: 60px;\n    text-align: center;\n}\n.navigation ul li a .icon .fa {\n    font-size: 24px;\n}\n.navigation ul li a .title {\n\n    position: relative;\n    display: block;\n    padding : 0 10px;\n    height: 60px;\n    line-height: 60px;\n    text-align: start;\n    white-space: nowrap;\n}\n.toggle {\n    position: absolute;\n    top: 0;\n    right :0;\n    width : 60px;\n    height: 60px;\n    background: #330748;\n    cursor : pointer;\n    /*margin-top: 60px;*/\n    z-index: 2;\n}\n.toggle.active {\n    background: #ea1d63;\n}\n.toggle:before {\n\n    content : '\\f0c9';\n    font-family:  fontAwesome,serif;\n    position: absolute;\n    width: 100%;\n    height: 100%;\n    line-height: 60px;\n    text-align: center;\n    font-size: 24px;\n    color: #fff;\n}\n.toggle.active:before {\n\n    content : '\\f00d';\n}\n@media(max-width:767px) {\n.navigation {\n        left : -60px;\n}\n.navigation.active {\n        left : 0px;\n        width: 100%;\n}\n}\n\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n/*:root {*/\n/*    --primary-color: #15063A;*/\n/*    --secondary-color : #8A7BAF*/\n/*}*/\n/** {*/\n/*    margin: 0;*/\n/*    padding: 0;*/\n/*    box-sizing: border-box;*/\n/*}*/\n\n\n\n/*.wrapper {*/\n/*    display: flex;*/\n/*    !*justify-content: flex-start;*!*/\n/*}*/\n::-webkit-scrollbar {\n    display: none;\n}\n* {\n    margin : 0;\n    padding : 0;\n    box-sizing: border-box;\n    font-family : 'Poppins',sans-serif;\n}\nbody {\n    min-height: 100vh;\n    background: #fff;\n    /*background: #150019;*/\n    /*overflow: hidden; !* Hide scrollbars *!*/\n}\n.main {\n    width: 80vw;\n    margin: 0 auto;\n    overflow-y: scroll;\n    -ms-overflow-style: none;  /* IE and Edge */\n    scrollbar-width: none;  /* Firefox */\n}\n\n/*.main::-webkit-scrollbar {*/\n/*    display: none;*/\n/*}*/\n.navigation {\n    margin-top: 60px;\n    position : fixed;\n    width : 60px;\n    height : 100%;\n    background: #3e0748;\n    transition: 0.5s;\n    /*//overflow: hidden;*/\n}\n.navigation:hover,\n.navigation.active{\n    width : 300px;\n}\n.navigation ul {\n    position: absolute;\n    top : 0;\n    left :0;\n    width : 100%;\n    color : #fff;\n}\n.navigation ul li {\n    position: relative;\n    width : 100%;\n    list-style: none;\n}\n.navigation ul li:hover {\n    background: #ea1d63;\n}\n.navigation ul li a {\n    position: relative;\n    /*display: block;*/\n    width: 100%;\n    display: flex;\n    text-decoration: none;\n    color : #fff;\n}\n.navigation ul li a .icon {\n\n    position: relative;\n    display: block;\n    min-width: 60px;\n    height: 60px;\n    line-height: 60px;\n    text-align: center;\n}\n.navigation ul li a .icon .fa {\n    font-size: 24px;\n}\n.navigation ul li a .title {\n\n    position: relative;\n    display: block;\n    padding : 0 10px;\n    height: 60px;\n    line-height: 60px;\n    text-align: start;\n    white-space: nowrap;\n}\n.toggle {\n    position: fixed;\n    top: 0;\n    right :0;\n    width : 60px;\n    height: 60px;\n    background: #330748;\n    cursor : pointer;\n    /*margin-top: 60px;*/\n    z-index: 2;\n}\n.toggle.active {\n    background: #ea1d63;\n}\n.toggle:before {\n\n    content : '\\f0c9';\n    font-family:  fontAwesome,serif;\n    position: absolute;\n    width: 100%;\n    height: 100%;\n    line-height: 60px;\n    text-align: center;\n    font-size: 24px;\n    color: #fff;\n}\n.toggle.active:before {\n\n    content : '\\f00d';\n}\n@media(max-width:767px) {\n.navigation {\n        left : -60px;\n}\n.navigation.active {\n        left : 0px;\n        width: 100%;\n}\n}\n\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 

@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Validator;
 
-class ExpenseController extends Controller
+class ExpensesController extends Controller
 {
     /**
      * Display a listing of the resource.
