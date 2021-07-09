@@ -1,6 +1,17 @@
 <template>
     <h1 class="title">Building Expenses</h1>
-<table class="center">
+<div class="expense-totals">
+
+    <table  class="center">
+        <thead>
+        <td></td>
+        </thead>
+    </table>
+
+</div>
+
+
+<table  class="center">
     <thead>
         <td>
             Date Created
@@ -89,34 +100,35 @@ export default {
 <style scoped>
 
 .title {
-    margin: 10vh auto;
+    margin: 15vh auto 0 auto;
     text-align: center;
     color : #3e0748;
 }
 
 .center {
     margin: 10vh auto;
-}
+    border-spacing: 0px;
 
-.center td {
-     text-align: center;
-     font-size: 12px;
 }
-
-tr {
-    border-bottom: 1pt solid black;
- }
 
 .center  td {
-     font-size: 14px;
     border-bottom: 1pt solid black;
- }
+     text-align: center;
+     font-size: 12px;
+    padding: 0;
+}
 
+.center thead  td {
+    border-bottom: 1pt solid black;
+    text-align: center;
+    font-size: 16px;
+}
 table {
+
     border: 1px solid black;
-    border-collapse: collapse;
+    /*border-collapse: collapse;*/
     overflow: hidden;
-    table-layout: auto;
+    /*table-layout: auto;*/
     width: 1200px;
 }
 </style>
