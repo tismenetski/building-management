@@ -134,7 +134,7 @@ export default {
 
 .add-expense {
     /*margin : 0 auto;*/
-    margin: 2rem auto;
+    margin: 10rem auto;
     max-width: 40rem;
 }
 
