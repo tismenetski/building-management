@@ -66,4 +66,14 @@ Route::middleware('auth:api')->group(function () {
     Route::get('/resident/{id}', [ResidentsController::class,'show'])->name('show_resident.api'); // Show Single Resident
     Route::delete('/resident/{id}', [ResidentsController::class,'destroy'])->name('destroy_resident.api'); // Delete Single Resident
     Route::put('/resident/{id}', [ResidentsController::class,'update'])->name('update_resident.api'); // Edit Single Resident
+
+    Route::group(['middleware' => 'role:admin'], function() {
+
+        Route::get('/admin', function() {
+
+            return 'Welcome Admin';
+
+        });
+
+    });
 });
