@@ -37,7 +37,7 @@ Route::middleware('auth:api')->group(function () {
 
 
     // Payment Routes --> Incoming Payments
-    Route::post('/payment',[PaymentsController::class,'store'])->name('store_payment.api'); // Save Payment
+//    Route::post('/payment',[PaymentsController::class,'store'])->name('store_payment.api'); // Save Payment
     Route::get('/payment',[PaymentsController::class,'index'])->name('index_payment.api'); // Show All Payments
     Route::get('/payment/{id}', [PaymentsController::class,'show'])->name('show_payment.api'); // Show Single Payment
     Route::delete('/payment/{id}', [PaymentsController::class,'destroy'])->name('destroy_payment.api'); // Delete Single Payment
@@ -45,7 +45,7 @@ Route::middleware('auth:api')->group(function () {
 
 
     // Expense Routes --> Outgoing Expenses
-    Route::post('/expense',[ExpensesController::class,'store'])->name('store_expense.api'); // Save Expense
+//    Route::post('/expense',[ExpensesController::class,'store'])->name('store_expense.api'); // Save Expense
     Route::get('/expense',[ExpensesController::class,'index'])->name('index_expense.api'); // Show All Expenses
     Route::get('/expense/{id}', [ExpensesController::class,'show'])->name('show_expense.api'); // Show Single Expense
     Route::delete('/expense/{id}', [ExpensesController::class,'destroy'])->name('destroy_expense.api'); // Delete Single Expense
@@ -69,11 +69,8 @@ Route::middleware('auth:api')->group(function () {
 
     Route::group(['middleware' => 'role:admin'], function() {
 
-        Route::get('/admin', function() {
-
-            return 'Welcome Admin';
-
-        });
+        Route::post('/payment',[PaymentsController::class,'store'])->name('store_payment.api'); // Save Payment
+        Route::post('/expense',[ExpensesController::class,'store'])->name('store_expense.api'); // Save Expense
 
     });
 });

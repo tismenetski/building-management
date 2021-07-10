@@ -18,13 +18,13 @@ class RoleMiddleware
     {
         if(!$request->user()->hasRole($role)) {
 
-            abort(404);
+            abort(404); //todo change to forbidden 403 with messages
 
         }
 
         if($permission !== null && !$request->user()->can($permission)) {
 
-            abort(404);
+            abort(404); //todo change to forbidden 403 with messages
         }
 
         return $next($request);

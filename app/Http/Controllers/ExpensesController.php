@@ -42,6 +42,8 @@ class ExpensesController extends Controller
      */
     public function store(Request $request)
     {
+
+
         //dd($request);
         Log::info('Request to add expense');
         $validator = Validator::make($request->all(), [

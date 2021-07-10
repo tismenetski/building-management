@@ -110,7 +110,7 @@ class ApiAuthController extends Controller
         $user->email = $request['email'];
         $user->password = Hash::make($request['password']);
         $user->remember_token = Str::random(10);
-        $user->type = $request['type'] ? $request['type'] : 0;
+        $user->type = 1;
         $user->save();
         $user->roles()->attach($admin_role);
 
@@ -171,7 +171,7 @@ class ApiAuthController extends Controller
         $user->email = $request['email'];
         $user->password = Hash::make($request['password']);
         $user->remember_token = Str::random(10);
-        $user->type = $request['type'] ? $request['type'] : 0;
+        $user->type = 0;
         $user->save();
         $user->roles()->attach($user_role);
 
