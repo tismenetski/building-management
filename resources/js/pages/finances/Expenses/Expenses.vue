@@ -49,7 +49,7 @@
     </tbody>
 </table>
 
-    <base-button link :to="addExpense">Add Expense</base-button>
+    <base-button v-if="isAdmin" link :to="addExpense">Add Expense</base-button>
 </template>
 
 <script>
@@ -74,6 +74,9 @@ export default {
         addExpense() {
             return `${this.$route.path}/addExpense`;
         },
+        isAdmin() {
+            return this.$store.getters.isAdmin;
+        }
     },
     methods :{
 

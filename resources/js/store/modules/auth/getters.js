@@ -13,5 +13,8 @@ export default {
     },
     didAutoLogout(state) {
         return state.didAutoLogout;
+    },
+    isAdmin(state){
+      return  state.role === 'admin';
     }
 };
